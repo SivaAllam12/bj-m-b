@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -73,42 +73,26 @@
 
     <main role="main">
         <div class="container">
-            <br /><h1 class="text-center">Welcom to my Blog</h1><br />
-            <br />
-            <h2>Latest posts:</h2><hr />
-            <ol>
-                {% for blog in blogs.all %}
-                <li>
-                    <a href="{{blog.id}}">{{blog.title}}</a><br />
-                    <p>published on {{blog.pub_date}}</p>
-                    {{blog.body}}<br />
-                    <img src="{{blog.image.url}}" height="200" width="300" /></img>
-                </li>
-                {% endfor %}
-            </ol>
 
-        </div>
-        <div class="container">
-            <br /><h1 class="text-center">Welcom to my Blog</h1><br />
-            <br />
-            <h2>Latest posts:</h2><hr />
-            <ol>
-                {% for blog in blogs.all %}
-                <li>
-                    
-                    <a href="{{blog.id}}"> {{blog.pub_date}}</a><br />
-                    
-                    
-                </li>
-                {% endfor %}
-            </ol>
+
+
+
+
+
+            <br /><h2 class="text-center">{{detail_blog.title}}</h2>
+            <p style="text-align:right">published on {{detail_blog.pub_date}}</p>
+
+            <img src="{{detail_blog.image.url}}" height="400" widht="1850"/></img><br />
+            {{detail_blog.body}}
+
+
 
         </div>
     </main>
 
     <footer class="text-muted">
         <div class="container text-center">
-            
+
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
